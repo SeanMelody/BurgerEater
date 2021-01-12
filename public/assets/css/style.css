@@ -2,3 +2,12 @@
 body {
     background-color:burlywood;
 }
+
+.jumbotron {
+    background-color: burlywood;
+    height: 50px;
+}
+
+.card {
+    height: 200px;
+}

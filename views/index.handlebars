@@ -1,47 +1,58 @@
-{{!-- h1 title --}}
-<h1>Let's Eat some Burgers!</h1>
-
-{{!-- Burgers to eat list title--}}
-<h3>Burgers to Eat!</h3>
-
 {{!-- Burgers to eat list --}}
-<ul class="to-eat">
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-{{!-- Burgers that have been eaten list title --}}
-<h3>Burgers Eaten</h3>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            {{!-- Burgers to eat list title--}}
+            <h3 class="card-title">Burgers to Eat!</h3>
+            <ul class="to-eat card-body">
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
 
-{{!-- Burgers eaten list --}}
-<ul class="eaten">
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
+            {{!-- Burgers that have been eaten list title --}}
+            <h3 class="card-title">Burgers Eaten</h3>
+
+            {{!-- Burgers eaten list --}}
+            <ul class="eaten card-body">
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
 
 {{!-- Add a burger section --}}
 
 {{!-- Add a burger title --}}
-<h3 class="add-burger">Add a Burger</h3>
-<form class="new-burger-form">
+<div class="row">
+    <div class="col-md-12 card mx-auto">
+        <h3 class="add-burger card-title text-center">Add a Burger</h3>
+        <form class="new-burger-form">
 
-    <div class="form-group">
-        <label for="new-burger">Add a Burger:</label>
-        <input type="text" class="new-burger" name="burger_name">
+            <div class="form-group mx-auto">
+                <label for="new-burger">Add a Burger:</label>
+                <input type="text" class="new-burger" name="burger_name">
+            </div>
+            {{!-- BEGIN TEST FOR DELETE BUTTON --}}
+            {{!-- <div class="form-group">
+                <label for="slee">Sleepy?</label><br>
+                <input type="radio" name="devoured" value="1" id="devoured" checked> devoured!<br>
+                <input type="radio" name="devoured" value="0" id="not-devoured"> Awake
+            </div> --}}
+            {{!-- END TEST FOR DELETE BUTTON --}}
+
+            {{!-- Submit button to send the new burger --}}
+            <button type="submit">Add Burger</button>
+        </form>
     </div>
-    {{!-- BEGIN TEST FOR DELETE BUTTON --}}
-    {{!-- <div class="form-group">
-        <label for="slee">Sleepy?</label><br>
-        <input type="radio" name="devoured" value="1" id="devoured" checked> devoured!<br>
-        <input type="radio" name="devoured" value="0" id="not-devoured"> Awake
-    </div> --}}
-    {{!-- END TEST FOR DELETE BUTTON --}}
-
-    {{!-- Submit button to send the new burger --}}
-    <button type="submit">Add Burger</button>
-</form>
+</div>

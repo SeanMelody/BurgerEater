@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
 
+    // Update burgers
 
+    // const eatBurger
 
 
 

@@ -6,7 +6,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Update burgers
 
-    // const eatBurger
+    const eatBurger = document.querySelectorAll(".devoured");
+
+    if (eatBurger) {
+        eatBurger.forEach((button) => {
+            button.addEventListener("click", (e) => {
+                console.log("button working");
+            })
+        })
+    }
 
 
 

@@ -14,4 +14,4 @@ const burger = {
 };
 
 // Gotta Module.Export!
-module.exports = cat;
+module.exports = burger;

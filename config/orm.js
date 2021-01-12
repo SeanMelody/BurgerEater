@@ -2,17 +2,9 @@
 const { query } = require('./connection.js');
 const connection = require('./connection.js');
 
-// Methods Needed?
 
-// selectAll()
-
-// insertOne()
-
-// updateOne()
-
-
-// From Cats!
-// Helper function for SQL syntax to add question marks (?, ?, ?) in query
+// Most of this code was learned/taken from the Cat In Class Activity
+// Helper function
 const printQuestionMarks = (num) => {
     const arr = [];
 
@@ -23,21 +15,21 @@ const printQuestionMarks = (num) => {
     return arr.toString();
 };
 
-// Helper function to convert object key/value pairs to SQL syntax
+// Convert object key/value pairs to SQL syntax
 const objToSql = (ob) => {
+    // Set arr to empty array
     const arr = [];
 
-    // Loop through the keys and push the key/value as a string int arr
+    // Loop through
     for (const key in ob) {
         let value = ob[key];
         // Check to skip hidden properties
         if (Object.hasOwnProperty.call(ob, key)) {
-            // If string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
+            // If string with spaces, add quotations
             if (typeof value === 'string' && value.indexOf(' ') >= 0) {
                 value = `'${value}'`;
             }
-            // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-            // e.g. {sleepy: true} => ["sleepy=true"]
+            // push to the array
             arr.push(`${key}=${value}`);
         }
     }
@@ -46,56 +38,68 @@ const objToSql = (ob) => {
     return arr.toString();
 };
 
-// Object for all our SQL statement functions.
+// Object for ORM
 const orm = {
+    // Select all function, using the table input and call back
     selectAll(tableInput, cb) {
+        // Select all
         const queryString = `SELECT * FROM ${tableInput};`;
+        // Check for all the errors
         connection.query(queryString, (err, result) => {
             if (err) {
                 throw err;
             }
+            // call back the result
             cb(result);
         });
     },
-    insertOne(table, cols, vals, cb) {
+
+    // Insert one function for adding a burger
+    insertOne(table, columns, values, cb) {
+        // Set up the queryString
         let queryString = `INSERT INTO ${table}`;
 
         queryString += ' (';
-        queryString += cols.toString();
+        queryString += columns.toString();
         queryString += ') ';
         queryString += 'VALUES (';
-        queryString += printQuestionMarks(vals.length);
+        queryString += printQuestionMarks(values.length);
         queryString += ') ';
 
-        console.log(queryString);
-
-        connection.query(queryString, vals, (err, result) => {
+        // Connect to the database and ask the question
+        connection.query(queryString, values, (err, result) => {
+            // Gotta check em all!
             if (err) {
                 throw err;
             }
-
+            // call back the results
             cb(result);
         });
     },
-    // An example of objColVals would be {name: panther, sleepy: true}
-    updateOne(table, objColVals, condition, cb) {
+
+    // Update One function for updating a burger to eaten!
+    updateOne(table, objValues, conditions, cb) {
+        // Set up the queryString
         let queryString = `UPDATE ${table}`;
 
         queryString += ' SET ';
-        queryString += objToSql(objColVals);
+        queryString += objToSql(objValues);
         queryString += ' WHERE ';
-        queryString += condition;
+        queryString += conditions;
 
-        console.log(queryString);
+        // Connect to the database and ask the question
         connection.query(queryString, (err, result) => {
+            // Check-check-checking them errors!
             if (err) {
                 throw err;
             }
-
+            // Call back the results
             cb(result);
         });
     },
 
+
+    // BEGIN TEST TO DELETE A BURGER
     // deleteOne(table, condition, cb) {
     //     let queryString = `DELETE FROM ${table}`;
 
@@ -114,6 +118,7 @@ const orm = {
     //         cb(result)
     //     })
     // },
+    // END TEST FOR DELETE BURGER
 
 }
 

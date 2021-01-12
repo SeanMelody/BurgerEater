@@ -1,28 +1,32 @@
+// Const to require Express
 const express = require("express");
 
+// Set the port for heroku or to 5008, cause I'm crazy!
 const PORT = process.env.PORT || 5000;
 
+// Const for express
 const app = express();
 
-// Serve static content for the app from the "public" directory in the application directory.
+//NEED THIS TO BE ABLE TO USE THE JS AND CSS IN THE PUBLIC FOLDER!!!!
 app.use(express.static("public"));
 
-// Parse application body
+// Required to make sure the html can be read
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Set Handlebars.
-var exphbs = require("express-handlebars");
+// Require handlebars
+const exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/burgers_controller.js");
+const routes = require("./controllers/burgers_controller.js");
 
+// Gotta use the routes
 app.use(routes);
 
-// Start our server so that it can begin listening to client requests.
+// Start the server and let user know where it's listening
 app.listen(PORT, function () {
     // Log (server-side) when our server has started
     console.log(`Listening on: http://localhost:${PORT}`);

@@ -1,12 +1,17 @@
+{{!-- List for the burgers --}}
 <li>
+    {{!-- Burger name --}}
     {{burger_name}}
 
+    {{!-- Button to eat, remake burger --}}
     <button class="devoured" data-id="{{id}}" data-not-devoured="{{devoured}}">
         {{#if devoured}}Eat Burger!
         {{else}}Make Again
         {{/if}}
     </button>
+    {{!-- BEGIN TEST DELETE BUTTON --}}
     {{!-- <button class="delete-burger" data-id="{{id}}">
         Delete
     </button> --}}
+    {{!-- END TEST DELETE BUTTON --}}
 </li>

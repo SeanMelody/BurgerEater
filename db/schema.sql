@@ -1,3 +1,5 @@
+-- Put into workbench, saved here just for future developers
+
 -- Drop the database if it exists
 DROP DATABASE IF EXISTS burgers_db;
 -- Create the database
@@ -12,3 +14,5 @@ CREATE TABLE burgers (
   devoured BOOLEAN DEFAULT false,
   PRIMARY KEY (id)
 );
+
+-- Seed data file has values to input into burgers table

@@ -4,7 +4,7 @@ const mysql = require("mysql");
 // Connect to the Database!
 const connection = mysql.createConnection({
     host: 'localhost',
-    // My port; if not 3306
+    // My port
     port: 3306,
     // my username
     user: 'root',
@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
     database: 'burgers_db',
 });
 
-// Make connection.
+// Make the connection.
 connection.connect((err) => {
     if (err) {
         // Console log any errors
@@ -25,5 +25,5 @@ connection.connect((err) => {
     console.log(`connected as id ${connection.threadId}`);
 });
 
-// Export connection for our ORM to use.
+// Gotta module.export
 module.exports = connection;

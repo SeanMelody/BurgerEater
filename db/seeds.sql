@@ -1,3 +1,5 @@
+-- Get the database and table from schema.sql
+
 -- Inserted into burgers for testing!
 INSERT INTO burgers (burger_name, devoured)
 VALUES ("Veggie Burger", true);

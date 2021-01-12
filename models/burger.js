@@ -8,9 +8,12 @@ const burger = {
     insertOne(cols, vals, cb) {
         orm.insertOne("burgers", cols, vals, (res) => cb(res));
     },
-    updateOne(objColVal, condition, cb) {
-        orm.updateOne("burgers", objColVal, condition, (res) => cb(res));
+    updateOne(objColVals, condition, cb) {
+        orm.updateOne("burgers", objColVals, condition, (res) => cb(res));
     },
+    // deleteOne(objColVal, condition, cb) {
+    //     orm.deleteOne("burgers", objColVal, condition, (res) => cb(res))
+    // }
 };
 
 // Gotta Module.Export!

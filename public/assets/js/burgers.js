@@ -68,4 +68,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         })
     }
+
+
+    // // Delete Burger
+
+    // const deleteBurger = document.querySelectorAll(".delete-burger")
+
+    // deleteBurger.forEach((button) => {
+    //     button.addEventListener("click", (e) => {
+    //         const id = e.target.getAttribute("data-id")
+    //         console.log(id)
+    //         fetch(`/api/burgers/:${id}`, {
+    //             method: "DELETE"
+    //         }
+    //         ).then((result) => {
+    //             console.log(result.status)
+    //             // location.reload()
+    //         })
+    //     })
+    // })
 })
+
+
+

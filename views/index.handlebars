@@ -1,7 +1,10 @@
-<h1>Burgers</h1>
+{{!-- h1 title --}}
+<h1>Let's Eat some Burgers!</h1>
 
-<h2>Burgers to Eat!</h2>
+{{!-- Burgers to eat list title--}}
+<h3>Burgers to Eat!</h3>
 
+{{!-- Burgers to eat list --}}
 <ul>
     {{#each burgers}}
     {{#unless devoured}}
@@ -9,9 +12,10 @@
     {{/unless}}
     {{/each}}
 </ul>
+{{!-- Burgers that have been eaten list title --}}
+<h3>Burgers Eaten</h3>
 
-<h2>Burgers Eaten</h2>
-
+{{!-- Burgers eaten list --}}
 <ul>
     {{#each burgers}}
     {{#if devoured}}
@@ -20,7 +24,10 @@
     {{/each}}
 </ul>
 
-<h2>Add a Burger</h2>
+{{!-- Add a burger section --}}
+
+{{!-- Add a burger title --}}
+<h3>Add a Burger</h3>
 <form class="new-burger-form">
 
     <div class="form-group">

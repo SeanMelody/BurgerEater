@@ -5,7 +5,7 @@
 <h3>Burgers to Eat!</h3>
 
 {{!-- Burgers to eat list --}}
-<ul>
+<ul class="to-eat">
     {{#each burgers}}
     {{#unless devoured}}
     {{> burgers/burger-block devoured=true}}
@@ -16,7 +16,7 @@
 <h3>Burgers Eaten</h3>
 
 {{!-- Burgers eaten list --}}
-<ul>
+<ul class="eaten">
     {{#each burgers}}
     {{#if devoured}}
     {{> burgers/burger-block devoured=false}}
@@ -27,7 +27,7 @@
 {{!-- Add a burger section --}}
 
 {{!-- Add a burger title --}}
-<h3>Add a Burger</h3>
+<h3 class="add-burger">Add a Burger</h3>
 <form class="new-burger-form">
 
     <div class="form-group">

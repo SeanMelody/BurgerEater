@@ -39,6 +39,33 @@ document.addEventListener('DOMContentLoaded', (event) => {
         })
     }
 
+    // Create Burger
+
+    const newBurgerForm = document.querySelector(".new-burger-form")
+    if (newBurgerForm) {
+        newBurgerForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const newBurger = {
+                burger_name: document.querySelector(".new-burger").value
+            };
+
+            fetch("/api/burgers", {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newBurger),
+            }).then(() => {
+                document.querySelector(".new-burger-form").value = ""
+
+                console.log("New Burger")
+                location.reload();
+            })
 
 
+
+        })
+    }
 })

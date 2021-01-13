@@ -20,16 +20,9 @@ if (process.env.JAWSDB_URL) {
     });
 }
 
-// Make the connection.
-connection.connect((err) => {
-    if (err) {
-        // Console log any errors
-        console.error(`error connecting: ${err.stack}`);
-        return;
-    }
-    // Console log the connection ID
-    console.log(`connected as id ${connection.threadId}`);
-});
+// Make the connection for heroku.
+connection.connect();
+
 
 // Always gotta module.export
 module.exports = connection;

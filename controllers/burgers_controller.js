@@ -59,5 +59,5 @@ router.put('/api/burgers/:id', (req, res) => {
 // END TEST DELETE FUNCTION
 
 
-// Always gotta module.export!
+// Gotta module.export!
 module.exports = router;

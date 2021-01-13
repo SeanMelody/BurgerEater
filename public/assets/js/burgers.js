@@ -95,6 +95,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // })
 
     // END TEST DELETE BURGER
+
+    // End of DOM event listener
 })
 
 

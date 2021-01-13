@@ -22,5 +22,5 @@ const burger = {
     // END TEST FOR DELETE ORM FUNCTION
 };
 
-// Gotta Module.Export!
+// Don't forget to Module.Export!
 module.exports = burger;

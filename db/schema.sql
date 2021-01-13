@@ -15,4 +15,4 @@ CREATE TABLE burgers (
   PRIMARY KEY (id)
 );
 
--- Seed data file has values to input into burgers table
+-- Seed data file has values to input into burgers table Yeay Burgers

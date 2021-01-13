@@ -10,12 +10,18 @@
     <title>Burger-Eater</title>
     <!-- My CSS Link Connected Here-->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/png" href="./assets/images/Favicon.png" />
 
 </head>
 
 <body>
     {{!-- h1 title --}}
-    <h1 class="jumbotron text-center">Let's Eat Some Burgers!</h1>
+    {{!-- <h1 class="jumbotron mx-auto text-center">Let's Eat Some Burgers!</h1> --}}
+    <header class="jumbotron ">
+        {{!-- <h1>Sean's Burger Eater</h1> --}}
+        <img src="./assets/images/seans-burger-logo-1.png" alt="Shake Shack Logo" class="img-thumbnail">
+    </header>
 
     {{!-- Handlebars data will all populate here! --}}
     {{{ body }}}

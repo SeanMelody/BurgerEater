@@ -6,8 +6,10 @@ body {
 /* Title of website styling */
 .jumbotron {
     background-color: rgb(240, 233, 223);
-    height: 50px;
-    font-weight: bolder;
+    /* height: 100px; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 /* Card styling for each of the three cards */
@@ -33,6 +35,11 @@ li {
     font-weight: bold;
 }
 
+/* Button text color */
+.btn {
+    color: #99cc66;
+}
+
 /* Eat/Re-Make button styling */
 .devoured {
     margin: 5px;
@@ -44,7 +51,7 @@ li {
     background-color: rgb(240, 233, 223);
 }
 
-/* Add a buger input size/width */
+/* Add a burger input size/width */
 .new-burger {
     height: 100px;
     width: 250px;

@@ -9,3 +9,5 @@ VALUES ("Swiss Portobello Mushroom", true);
 
 INSERT INTO burgers (burger_name, devoured)
 VALUES ("Chicken Sandwich", false);
+
+-- Use the functioning app to add more!  Yeay!

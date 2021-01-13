@@ -12,6 +12,7 @@ app.use(express.static("public"));
 
 // Required to make sure the html can be read
 app.use(express.urlencoded({ extended: true }));
+// Json it!
 app.use(express.json());
 
 // Require handlebars

@@ -32,14 +32,16 @@ https://limitless-reaches-92941.herokuapp.com/
     Also thank you to Lidsay Chapin who's youtube walkthrough of Heroku deployment, made this possible.
     https://www.youtube.com/channel/UCV4vq8A1V-lhoFi4NcD6V9A  Thank you!
     
+    
 Gif Walk Through:
 
-![Burger-Eater Walkthrough](https://user-images.githubusercontent.com/68625400/104421360-17bd3880-5530-11eb-8990-2a5649aa7a6a.gif)
+![Burger-Eater](https://user-images.githubusercontent.com/68625400/104653974-3f1b1f00-5670-11eb-94dd-1901eb521e01.gif)
+    
     
 Screen Capture Walk Through:
 
-![Burger-Eater-Walkthrough-1](https://user-images.githubusercontent.com/68625400/104420947-8221a900-552f-11eb-8f26-c0cd8ed095cb.png)
-![Burger-Eater-Walkthrough-2](https://user-images.githubusercontent.com/68625400/104420950-8352d600-552f-11eb-84d0-459191fed1c6.png)
-![Burger-Eater-Walkthrough-3](https://user-images.githubusercontent.com/68625400/104420955-83eb6c80-552f-11eb-9ac9-2743ac5567f7.png)
-![Burger-Eater-Walkthrough-4](https://user-images.githubusercontent.com/68625400/104420959-851c9980-552f-11eb-8ea0-4b020d880280.png)
+![Burgers-1](https://user-images.githubusercontent.com/68625400/104653364-5574ab00-566f-11eb-8bea-196eb829a8cf.png)
+![Burgers-2](https://user-images.githubusercontent.com/68625400/104653368-56a5d800-566f-11eb-9462-41cea298de68.png)
+![Burgers-3](https://user-images.githubusercontent.com/68625400/104653370-57d70500-566f-11eb-9ed0-da61f9f0fb05.png)
+![Burgers-4](https://user-images.githubusercontent.com/68625400/104653372-59083200-566f-11eb-9fd5-a5352c5b81d1.png)
 

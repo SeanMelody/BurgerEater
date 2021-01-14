@@ -6,7 +6,7 @@ https://limitless-reaches-92941.herokuapp.com/
 
 ## Description
 
-    A burger eating app, that lets a user add, and then eat, or re-make burgers!
+    A burger eating app, that lets a user add, and then eat then delete burgers!
 
 ## Programing Languages Used
 

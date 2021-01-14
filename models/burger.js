@@ -15,11 +15,10 @@ const burger = {
     updateOne(objColVals, condition, cb) {
         orm.updateOne("burgers", objColVals, condition, (res) => cb(res));
     },
-    // BEGIN TEST FOR DELETE ORM FUNCTION
-    // deleteOne(objColVal, condition, cb) {
-    //     orm.deleteOne("burgers", objColVal, condition, (res) => cb(res))
-    // }
-    // END TEST FOR DELETE ORM FUNCTION
+    // Using the delete one orm function
+    deleteOne(objColVal, condition, cb) {
+        orm.deleteOne("burgers", objColVal, condition, (res) => cb(res))
+    }
 };
 
 // Don't forget to Module.Export!

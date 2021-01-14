@@ -76,28 +76,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
 
-    // BEGIN TEST DELETE BURGER
+    // Delete Burger Code
 
-    // const deleteBurger = document.querySelectorAll(".delete-burger")
+    // Const to select the class
+    const deleteBurger = document.querySelectorAll(".delete-burger")
 
-    // deleteBurger.forEach((button) => {
-    //     button.addEventListener("click", (e) => {
-    //         const id = e.target.getAttribute("data-id")
-    //         console.log(id)
-    //         fetch(`/api/burgers/:${id}`, {
-    //             method: "DELETE"
-    //         }
-    //         ).then((result) => {
-    //             console.log(result.status)
-    //             // location.reload()
-    //         })
-    //     })
-    // })
-
-    // END TEST DELETE BURGER
+    // For each to give each burger an event listener
+    deleteBurger.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            // target the id for the button pressed
+            const id = e.target.getAttribute("data-id")
+            // Fetch request to delete the burger
+            fetch(`/api/burgers/${id}`, {
+                method: "DELETE"
+            }
+            )
+            // Reload the page
+            location.reload()
+        })
+    })
 
     // End of DOM event listener
 })
+
+
 
 
 

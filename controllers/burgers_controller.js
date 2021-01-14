@@ -46,18 +46,18 @@ router.put('/api/burgers/:id', (req, res) => {
     );
 });
 
-// BEGIN TEST DELETE FUNCTION
-// router.delete("/api/burgers/:id", (req, res) => {
-//     const condition = `id = ${req.params.id}`
-//     burger.deleteOne(condition, (res) => {
-//         if (res.affectedRows === 0) {
-//             return res.status(404).end();
-//         }
-//         res.status(200).end;
-//     })
-// })
-// END TEST DELETE FUNCTION
-
+// Router.delete to delete a burger
+router.delete("/api/burgers/:id", (req, res) => {
+    // Set the condition
+    const condition = req.params.id
+    // Use the burger deleteone function
+    burger.deleteOne(condition, (res) => {
+        if (res.affectedRows === 0) {
+            return res.status(404).end();
+        }
+        res.status(200).end;
+    })
+})
 
 // Gotta module.export!
 module.exports = router;

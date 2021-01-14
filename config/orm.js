@@ -99,27 +99,23 @@ const orm = {
     },
 
 
-    // BEGIN TEST TO DELETE A BURGER
-    // deleteOne(table, condition, cb) {
-    //     let queryString = `DELETE FROM ${table}`;
+    // Delete One function to delete Burgers after eating
+    deleteOne(table, condition) {
+        // Set up the queryString
+        let queryString = `DELETE FROM ${table}`;
 
-    //     queryString += " WHERE ";
-    //     // queryString += "ID";
-    //     // queryString += " = "
-    //     // queryString += (objColVal);
-    //     // queryString += " WHERE ";
-    //     queryString += condition;
+        queryString += " WHERE ";
+        queryString += "ID";
+        queryString += " ="
+        queryString += condition;
 
-    //     console.log(queryString);
-    //     connection.query(queryString, (err, result) => {
-    //         if (err) {
-    //             throw err;
-    //         }
-    //         cb(result)
-    //     })
-    // },
-    // END TEST FOR DELETE BURGER
-
+        // Connect to the database and delete the burger
+        connection.query(queryString, (err, result) => {
+            if (err) {
+                throw err;
+            }
+        })
+    },
 }
 
 // Gotta Module.Exports

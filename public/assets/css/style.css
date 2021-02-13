@@ -1,11 +1,13 @@
 /* Set the background color */
 body {
-    background-color: rgb(240, 233, 223);
+    /* background-color: rgb(240, 233, 223); */
+    background-image: linear-gradient( rgb(252, 237, 36), rgb(9, 219, 247)  50% );
 }
 
 /* Title of website styling */
 .jumbotron {
-    background-color: rgb(240, 233, 223);
+    /* background-color: rgb(240, 233, 223); */
+    background-color: rgba(0,0,0, 0.0);
     /* height: 100px; */
     margin-left: auto;
     margin-right: auto;
@@ -15,7 +17,8 @@ body {
 /* Card styling for each of the three cards */
 .card {
     height: 300px;
-    background-color: rgb(184, 184, 184);
+    background-color: rgba(255, 255, 255, 0.4);
+    /* background-color: rgb(184, 184, 184); */
     margin: 15px;
 }
 
@@ -55,7 +58,8 @@ li {
 /* Add a burger section styling */
 .add-burger {       
     margin: 20px;
-    background-color: rgb(240, 233, 223);
+    /* background-color: rgb(240, 233, 223); */
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Add a burger input size/width */
